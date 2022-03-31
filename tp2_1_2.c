@@ -6,13 +6,12 @@
 int main(){
     srand(time(NULL));
     int i;
-    double *vt;
-    vt=malloc(N*sizeof(double));
-
+    double vt[N];
+    double *punt=&vt[0];
     for(i=0; i<N; i++)
     {
-        vt[i] = 1+rand()%100;
-        printf("\n%.2f", vt[i]);
+        *punt = 1+rand()%100;
+        printf("\n%.2f", *punt++);
     }
 
 }
